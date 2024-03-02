@@ -21,6 +21,7 @@ func main() {
 
 // echoHandler echoes back the received request's body as the response.
 func echoHandler(w http.ResponseWriter, r *http.Request) {
+	w.WriteHeader(http.StatusOK)
 	// Set the Content-Type header to plain text
 	w.Header().Set("Content-Type", "text/plain")
 
